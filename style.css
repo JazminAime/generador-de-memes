@@ -1,0 +1,62 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header-wrapper {
+    height: 120px;
+    background-color: #191E2B;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header-title {
+    color: white;
+}
+
+.button-header {
+    height: 35px;
+    width: 120px;
+    background-color: transparent;
+    border: 0;
+    color: white;
+    font-size: 17px;
+}
+
+.button-header:hover {
+    cursor: pointer;
+    background-color: rgb(166, 165, 165);
+    height: 35px;
+    border-radius: 3px;
+}
+
+i {
+    margin: 3px;
+}
+
+/* main {
+    width: 100%;
+} */
+
+.meme-container {
+    width: 600px;
+    height: 500px;
+    background-color: black;
+    margin: auto;
+}
+
+.text-meme {
+    height: 70px;
+    width: 100%;
+    background-color: white;
+}
+
+.meme-container-img {
+    height: 360px;
+    width: 100%;
+}
+
