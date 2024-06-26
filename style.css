@@ -8,8 +8,8 @@
 .header-wrapper {
     height: 120px;
     background-color: #191E2B;
-    text-align: center;
     display: flex;
+    align-items: center;
     flex-direction: column;
     justify-content: space-around;
 }
@@ -20,11 +20,12 @@
 
 .button-header {
     height: 35px;
-    width: 120px;
+    width: 115px;
     background-color: transparent;
     border: 0;
     color: white;
     font-size: 17px;
+    transition: background-color 0.5s;
 }
 
 .button-header:hover {
@@ -38,25 +39,233 @@ i {
     margin: 3px;
 }
 
-/* main {
-    width: 100%;
-} */
+main {
+    background-color: #30343F;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
 
 .meme-container {
-    width: 600px;
-    height: 500px;
+    width: 100%;
+    max-width: 600px;
     background-color: black;
-    margin: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .text-meme {
-    height: 70px;
+    height: 62px;
     width: 100%;
     background-color: white;
+    color: black;
+    font-size: 50px;
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: bold;
 }
 
 .meme-container-img {
-    height: 360px;
+    height: 386px;
     width: 100%;
 }
+
+.button-download {
+    background-color: #27762d;
+    transition: background-color 0.5s;
+    color: white;
+    font-size: 16px;
+    border: 0;
+    padding: 8px;
+    margin-top: 35px;
+    margin-bottom: 50px;
+    width: 150px;
+    height: 40px;
+}
+
+.button-download:hover {
+    cursor: pointer;
+    background-color: #1B5E20;
+}
+
+.panel-img {
+    display: block;
+}
+
+.aside-container {
+    width: 240px;
+    position: absolute;
+    background-color: #252935;
+    top: 0;
+    right: 0;
+    z-index: 1;
+}
+
+.panel-title {
+    color: white;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.panel-container {
+    margin-bottom: 20px;
+}
+
+.panel-caption {
+    color: white;
+    margin-bottom: 8px;
+    width: 90%;
+    margin-left: 7px;
+    font-size: 18px;
+}
+
+.panel-input {
+    width: 90%;
+    height: 35px;
+    background-color: #393e49;
+    margin-left: 7px;
+    border: 0;
+    border-radius: 3px;
+    color: white;
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.panel-color-container {
+    display: flex;
+}
+
+.panel-color {
+    position: relative;
+    display: flex;
+}
+
+span {
+    position: absolute;
+    color: white;
+}
+
+.panel-aside {
+    width: 45%;
+}
+
+.panel-select {
+    background-color: #393e49;
+    color: white;
+    font-size: 16px;
+    height: 35px;
+    border: 0;
+    border-radius: 3px;
+    padding: 5px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    font-size: 15px;
+    color: white;
+    margin-left: 7px;
+    margin-bottom: 10px;
+}
+
+input[type='range'] {
+    width: 95%;
+    background-color: #5a5d68;
+    appearance: none;
+    height: 7px;
+    border-radius: 8px;
+    margin-top: 8px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    appearance: none;
+    width: 17px;
+    height: 17px; 
+    background: #ffffff; 
+    border-radius: 50%; 
+    cursor: pointer; 
+}
+
+.button-filter {
+    background-color: #4e5565;
+    color: white;
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    height: 35px;
+    width: 140px;
+    border: 0;
+    font-size: 16px;
+}
+
+.panel-text {
+    display: block;
+}
+
+.panel-checkbox {
+    display: flex;
+}
+
+input[type='checkbox'] {
+    margin-left: 10px;
+}
+
+.label-checkbox {
+    margin-top: 8px;
+}
+
+.font-select {
+    margin-left: 7px;
+    width: 90%;
+}
+
+.panel-text-flex {
+    display: flex;
+}
+
+.text-size {
+    width: 50%;
+    margin-top: 7px;
+    margin-right: 2px;
+}
+
+.buttons-alignment {
+    flex: 1;
+    margin-top: 7px;
+}
+
+.button-align {
+    background-color: #393e49;
+    border: 0;
+    color: white;
+    width: 27px;
+    margin-left: 2px;
+    height: 35px;
+    border-radius: 3px;
+}
+
+.panel-color-background {
+    width: 48%;
+}
+
+.panel-color-flex {
+    display: flex;
+}
+
+.button-cont {
+    background-color: #393e49;
+    border: 0;
+    margin-left: 7px;
+    font-size: 16px;
+    color: white;
+    width: 68px;
+    height: 35px;
+    border-radius: 3px;
+}
+
+
 
