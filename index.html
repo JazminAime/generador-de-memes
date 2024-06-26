@@ -8,41 +8,56 @@
     <title>Generador de memes - Proyecto 2</title>
 </head>
 <body>
+
+    <!-- HEADER -->
     <header class="header-wrapper">
         <h1 class="header-title">Generador de Memes</h1>
         <div class="header-container">
-            <button class="button-header header-button-first"><i class="fa fa-regular fa-file-image"></i>Imagen</button>
-            <button class="button-header header-button-second"><i class=" fa fa-solid fa-font"></i>Texto</button>
-            <button class="button-header header-button-third"><i class="fa fa-solid fa-lightbulb"></i>Modo Oscuro</button>
+            <button class="button-header" id="img-button"><i class="fa fa-regular fa-file-image"></i>Imagen</button>
+            <button class="button-header" id="text-button"><i class="fa fa-solid fa-font"></i>Texto</button>
+            <button class="button-header" id="dark-button"><i class="fa fa-solid fa-lightbulb"></i>Modo Oscuro</button>
+            <button class="button-header" id="light-button"><i class="fa fa-solid fa-lightbulb"></i>Modo Claro</button>
         </div>
     </header>
+
+    <!-- CARGAR IMG -->
     <main>
-        <div class="meme-container">
-            <p class="text-meme meme-container-top-text">TOP TEXT</p>
-            <div class="meme-container-img"></div>
-            <p class="text-meme meme-container-bottom-text">BOTTOM TEXT</p>
+        <div class="meme-container" id="meme-container">
+            <p class="text-meme meme-container-top-text" id="top-text">TOP TEXT</p>
+            <div class="meme-container-img" id="meme-img"></div>
+            <p class="text-meme meme-container-bottom-text" id="bottom-text">BOTTOM TEXT</p>
         </div>
         <div class="center-button-download">
-            <button class="button-download"><i class="fa fa-solid fa-download"></i>Descagar Meme</button>
+            <button class="button-download" id="button-download"><i class="fa fa-solid fa-download"></i>Descagar Meme</button>
         </div>
     </main>
-        <aside class="aside-container">
-            <section class="panel-img">
+        <aside class="aside-container" id="panel">
+            <div class="button-panel-close">
+                <button class="close-panel" id="close-button-panel" aria-label="Cerrar panel">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+
+            <!-- PANEL IMAGEN -->
+            <section class="panel-img" id="panel-img">
+
+                <!-- ASIDE IMAGEN -->
                 <h2 class="panel-title">IMAGEN</h2>
                 <div class="panel-container">
                     <p class="panel-caption">URL</p>
                     <input type="url" name="url-img" id="url-img" class="panel-input">
                 </div>
 
+                <!-- ASIDE FONDO -->
                 <div class="panel-container">
                     <p class="panel-caption">FONDO</p>
                     <div class="panel-color-container">
                         <div class="panel-color panel-aside">
                             <input type="color" name="panel-color-input" id="panel-color-input" value="#FFFFFF" class="panel-input">
-                            <span>#FFFFFF</span>
+                            <!-- <span>#FFFFFF</span> -->
                         </div>
                         <div class="panel-aside">
-                            <select id="panel-select" class="panel-select">
+                            <select id="panel-select" class="panel-select" id="select-background">
                                 <option value="ninguno">Ninguno</option>
                                 <option value="aclarar">Aclarar</option>
                                 <option value="oscurecer">Oscurecer</option>
@@ -54,6 +69,7 @@
                     </div>
                 </div>
 
+                <!-- ASIDE FILTROS -->
                 <div class="panel-container">
                     <p class="panel-caption">FILTROS</p>
                         <label for="brightness">
@@ -101,10 +117,13 @@
                             <input type="range" id="invert" min="0" max="1" step="0.1" value="1">
                         </label>
                 </div>
-                <button class="button-filter">Reestablecer filtros</button>
+                <button class="button-filter" id="button-filter-default">Reestablecer filtros</button>
             </section>
 
-            <section class="panel-text">
+            <!-- PANEL TEXTO -->
+            <section class="panel-text" id="panel-text">
+
+                <!-- ASIDE TEXTO -->
                 <h2 class="panel-title">TEXTO</h2>
                 <div class="panel-container">
                     <p class="panel-caption">SUPERIOR</p>
@@ -123,9 +142,10 @@
                     </div>
                 </div>
 
+                <!-- ASIDE FUENTE -->
                 <div class="panel-container">
                     <p class="panel-caption">FUENTE</p>
-                    <select class="panel-select font-select">
+                    <select class="panel-select font-select" id="text-select-font">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>
                         <option value="American Typewriter">American Typewriter</option>
@@ -137,28 +157,34 @@
                         <option value="Times New Roman">Times New Roman</option>
                     </select>
 
+                    <!-- ASIDE TAMAÑO -->
                     <div class="panel-text-flex">
                         <input type="number" name="Tamaño de fuente" id="text-size" min="12" value="40" class="panel-input text-size">
+                        <!-- ASIDE ALINEACION -->
                         <div class="buttons-alignment">
-                            <button class="button-align"><i class=" fa fa-solid fa-align-left"></i></button>
-                            <button class="button-align"><i class="fa fa-solid fa-align-center"></i></button>
-                            <button class="button-align"><i class=" fa fa-solid fa-align-right"></i></button>
+                            <button class="button-align" id="text-left-align"><i class=" fa fa-solid fa-align-left"></i></button>
+                            <button class="button-align" id="text-center-align"><i class="fa fa-solid fa-align-center"></i></button>
+                            <button class="button-align" id="text-right-align"><i class=" fa fa-solid fa-align-right"></i></button>
                         </div>
                     </div>
                 </div>
+
+                <!-- ASIDE COLOR -->
                     <div class="panel-container">
                         <div class="panel-text-flex">
+                            <!-- ASIDE COLOR TEXTO -->
                         <div class="panel-color-background">
                             <p class="panel-caption">COLOR</p>
                             <div class="panel-color-flex">
-                                <input type="color" name="" id="text-color" class="panel-input">
+                                <input type="color" name="" id="text-color" class="panel-input" value="#000000">
                                 <!-- <span>#000000</span> -->
                             </div>
                         </div>
+                        <!-- ASIDE COLOR FONDO -->
                         <div class="panel-color-background">
                             <p class="panel-caption">FONDO</p>
                             <div class="panel-color-container">
-                                <input type="color" name="" id="background-text" class="panel-input">
+                                <input type="color" name="" id="background-text" class="panel-input" value="#FFFFFF">
                                 <!-- <span>#FFFFFF</span> -->
                             </div>
                         </div>
@@ -169,6 +195,7 @@
                     </div>
                 </div>
 
+                <!-- ASIDE CONTORNO -->
                 <div class="panel-container">
                     <p class="panel-caption">CONTORNO</p>
                     <div class="panel-color-flex">
@@ -178,11 +205,13 @@
                     </div>
                 </div>
 
+                <!-- ASIDE ESPACIADO - PADDING -->
                 <div class="panel-container">
                     <p class="panel-caption">ESPACIADO</p>
                     <input type="number" name="padding" id="input-padding" class="panel-input" min="10" max="50" value="35">
                 </div>
 
+                <!-- ASIDE INTERLINEADO -->
                 <div class="panel-container">
                     <p class="panel-caption">INTERLINEADO</p>
                     <select name="interlineado" id="line-height-text" class="panel-select font-select">

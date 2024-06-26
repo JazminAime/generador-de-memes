@@ -25,12 +25,12 @@
     border: 0;
     color: white;
     font-size: 17px;
-    transition: background-color 0.5s;
+    transition: background-color 0.3s;
 }
 
 .button-header:hover {
     cursor: pointer;
-    background-color: rgb(166, 165, 165);
+    background-color: #4e5565;
     height: 35px;
     border-radius: 3px;
 }
@@ -42,6 +42,7 @@ i {
 main {
     background-color: #30343F;
     display: flex;
+    height: 735px;
     flex-direction: column;
     align-items: center;
 } 
@@ -88,8 +89,19 @@ main {
     background-color: #1B5E20;
 }
 
+.button-panel-close {
+    display: none;
+    justify-content: flex-end;
+    margin-right: 7px;
+    margin-top: 5px;
+}
+
+.close-panel:hover {
+    cursor: pointer;
+}
+
 .panel-img {
-    display: block;
+    display: none;
 }
 
 .aside-container {
@@ -120,6 +132,7 @@ main {
     width: 90%;
     margin-left: 7px;
     font-size: 18px;
+    font-weight: bold;
 }
 
 .panel-input {
@@ -133,6 +146,12 @@ main {
     padding: 5px;
     font-size: 16px;
     margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+.panel-input:hover {
+    cursor: pointer;
+    background-color: #4e5565;
 }
 
 .panel-color-container {
@@ -161,6 +180,12 @@ span {
     border: 0;
     border-radius: 3px;
     padding: 5px;
+    transition: background-color 0.3s;
+}
+
+.panel-select:hover {
+    cursor: pointer;
+    background-color: #4e5565;
 }
 
 label {
@@ -199,11 +224,18 @@ input[type=range]::-webkit-slider-thumb {
     height: 35px;
     width: 140px;
     border: 0;
+    border-radius: 3px;
     font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.button-filter:hover {
+    cursor: pointer;
+    background-color: #5f626a;
 }
 
 .panel-text {
-    display: block;
+    display: none;
 }
 
 .panel-checkbox {
@@ -246,6 +278,12 @@ input[type='checkbox'] {
     margin-left: 2px;
     height: 35px;
     border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.button-align:hover {
+    cursor: pointer;
+    background-color: #4e5565;
 }
 
 .panel-color-background {
@@ -265,6 +303,12 @@ input[type='checkbox'] {
     width: 68px;
     height: 35px;
     border-radius: 3px;
+    transition: background-color 0.3s;
+}
+
+.button-cont:hover {
+    cursor: pointer;
+    background-color: #4e5565;
 }
 
 
