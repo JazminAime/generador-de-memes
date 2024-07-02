@@ -1,3 +1,27 @@
+body.dark-theme {
+    --color-header: #191e2b;
+    --color-background: #30343F;
+    --color-panel: #252935;
+    --color-input: #5a5d68;
+
+    --color-boton: #393e49;
+    --color-boton-hover: #4e5565;
+    --color-boton-hover-2: #5f626a;
+
+    --color-text: #ffffff;
+}
+
+body.light-theme {
+    --color-header: #e0e0e0;
+    --color-background: #eeeeee;
+    --color-panel: #fafafa;
+
+    --color-boton: #e0e0e0;
+    --color-boton-hover: #bdbdbd;
+
+    --color-text: #424242;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -7,7 +31,7 @@
 
 .header-wrapper {
     height: 120px;
-    background-color: #191E2B;
+    background-color: var(--color-header);
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -15,7 +39,8 @@
 }
 
 .header-title {
-    color: white;
+    /* color: white; */
+    color: var(--color-text)
 }
 
 .button-header {
@@ -23,14 +48,14 @@
     width: 115px;
     background-color: transparent;
     border: 0;
-    color: white;
+    color: var(--color-text);
     font-size: 17px;
     transition: background-color 0.3s;
 }
 
 .button-header:hover {
     cursor: pointer;
-    background-color: #4e5565;
+    background-color: var(--color-boton-hover);
     height: 35px;
     border-radius: 3px;
 }
@@ -40,9 +65,9 @@ i {
 }
 
 main {
-    background-color: #30343F;
+    background-color: var(--color-background);
     display: flex;
-    height: 735px;
+    height: 765px;
     flex-direction: column;
     align-items: center;
 } 
@@ -89,7 +114,7 @@ main {
     background-color: #1B5E20;
 }
 
-.button-panel-close {
+.close-panel {
     display: none;
     justify-content: flex-end;
     margin-right: 7px;
@@ -102,19 +127,19 @@ main {
 
 .panel-img {
     display: none;
-}
+} 
 
 .aside-container {
     width: 240px;
     position: absolute;
-    background-color: #252935;
+    background-color: var(--color-panel);
     top: 0;
     right: 0;
     z-index: 1;
 }
 
 .panel-title {
-    color: white;
+    color: var(--color-text);
     text-align: center;
     width: 100%;
     margin-bottom: 20px;
@@ -127,7 +152,7 @@ main {
 }
 
 .panel-caption {
-    color: white;
+    color: var(--color-text);
     margin-bottom: 8px;
     width: 90%;
     margin-left: 7px;
@@ -138,11 +163,11 @@ main {
 .panel-input {
     width: 90%;
     height: 35px;
-    background-color: #393e49;
+    background-color: var(--color-boton);
     margin-left: 7px;
     border: 0;
     border-radius: 3px;
-    color: white;
+    color: var(--color-text);
     padding: 5px;
     font-size: 16px;
     margin-bottom: 5px;
@@ -151,7 +176,7 @@ main {
 
 .panel-input:hover {
     cursor: pointer;
-    background-color: #4e5565;
+    background-color: var(--color-boton-hover);
 }
 
 .panel-color-container {
@@ -163,18 +188,18 @@ main {
     display: flex;
 }
 
-span {
+/* span {
     position: absolute;
     color: white;
-}
+} */
 
 .panel-aside {
     width: 45%;
 }
 
 .panel-select {
-    background-color: #393e49;
-    color: white;
+    background-color: var(--color-boton);
+    color: var(--color-text);
     font-size: 16px;
     height: 35px;
     border: 0;
@@ -185,14 +210,14 @@ span {
 
 .panel-select:hover {
     cursor: pointer;
-    background-color: #4e5565;
+    background-color: var(--color-boton-hover);
 }
 
 label {
     display: flex;
     flex-direction: column;
     font-size: 15px;
-    color: white;
+    color: var(--color-text);
     margin-left: 7px;
     margin-bottom: 10px;
 }
@@ -210,14 +235,14 @@ input[type=range]::-webkit-slider-thumb {
     appearance: none;
     width: 17px;
     height: 17px; 
-    background: #ffffff; 
+    background: var(--color-text); 
     border-radius: 50%; 
     cursor: pointer; 
 }
 
 .button-filter {
-    background-color: #4e5565;
-    color: white;
+    background-color: var(--color-boton-hover);
+    color: var(--color-text);
     margin-left: 10px;
     margin-top: 10px;
     margin-bottom: 40px;
@@ -231,12 +256,12 @@ input[type=range]::-webkit-slider-thumb {
 
 .button-filter:hover {
     cursor: pointer;
-    background-color: #5f626a;
+    background-color: var(--color-boton-hover-2);
 }
 
 .panel-text {
     display: none;
-}
+} 
 
 .panel-checkbox {
     display: flex;
@@ -271,9 +296,9 @@ input[type='checkbox'] {
 }
 
 .button-align {
-    background-color: #393e49;
+    background-color: var(--color-boton);
     border: 0;
-    color: white;
+    color: var(--color-text);
     width: 27px;
     margin-left: 2px;
     height: 35px;
@@ -283,7 +308,7 @@ input[type='checkbox'] {
 
 .button-align:hover {
     cursor: pointer;
-    background-color: #4e5565;
+    background-color: var(--color-boton-hover);
 }
 
 .panel-color-background {
@@ -295,11 +320,11 @@ input[type='checkbox'] {
 }
 
 .button-cont {
-    background-color: #393e49;
+    background-color: var(--color-boton);
     border: 0;
     margin-left: 7px;
     font-size: 16px;
-    color: white;
+    color: var(--color-text);
     width: 68px;
     height: 35px;
     border-radius: 3px;
@@ -308,8 +333,9 @@ input[type='checkbox'] {
 
 .button-cont:hover {
     cursor: pointer;
-    background-color: #4e5565;
+    background-color: var(--color-boton-hover);
 }
 
-
-
+.light {
+    display: none;
+}
