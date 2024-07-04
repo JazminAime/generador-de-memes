@@ -269,7 +269,41 @@ centerAlign.addEventListener('click', function(){
 rightAlign.addEventListener('click', function(){
     topText.style.justifyContent = 'right';
     bottomText.style.justifyContent = 'right';
-})
+});
+
+// COLOR TEXTO
+textColor = document.getElementById('text-color');
+
+textColor.addEventListener('input', function(){
+    const colorText = textColor.value;
+    topText.style.color = colorText;
+    bottomText.style.color = colorText
+});
+
+// FONDO TEXTO
+const bcgText = document.getElementById('background-text');
+
+bcgText.addEventListener('input', function(){
+    const bcgTexto = bcgText.value;
+    topText.style.backgroundColor = bcgTexto
+    ;
+    bottomText.style.backgroundColor = bcgTexto;
+});
+
+// FONDO TRANSPARENTE
+const bcgTransparent = document.getElementById('transparent-checkbox');
+
+bcgTransparent.addEventListener('change', function(){
+    if (bcgTransparent.checked){
+        topText.style.backgroundColor = 'transparent';
+        bottomText.style.backgroundColor = 'transparent';
+    } else {
+        const bcgTexto = bcgText.value;
+        topText.style.backgroundColor = bcgTexto;
+        bottomText.style.backgroundColor = bcgTexto;
+    }
+});
+
 
 
 
