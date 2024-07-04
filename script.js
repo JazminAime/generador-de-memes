@@ -47,6 +47,8 @@ buttonLight.addEventListener('click', function(){
     buttonDark.style.display = 'inline';
 });
 
+// PANEL IMAGEN
+
 // CARGAR IMAGEN
 const urlImg = document.getElementById('url-img');
 const imgMeme = document.getElementById('img-meme');
@@ -167,6 +169,107 @@ function descargarMeme () {
 }
 
 buttonDownload.addEventListener('click', descargarMeme);
+
+// PANEL TEXTO
+// TEXTO SUPERIOR - INFERIOR
+const topText = document.getElementById('top-text');
+const bottomText = document.getElementById('bottom-text');
+const inputTopText = document.getElementById('input-top-text');
+const noTopText = document.getElementById('no-top-text');
+const inputBottomText = document.getElementById('input-bottom-text');
+const noBottomText = document.getElementById('no-bottom-text');
+
+inputTopText.addEventListener('input', function(){
+    topText.innerText = inputTopText.value;
+});
+
+noTopText.addEventListener('change', function(){
+    if (noTopText.checked){
+        topText.style.display = 'none';
+    }
+    else {
+        topText.style.display= 'flex';
+        topText.style.textAlign = 'center';
+    }
+});
+
+inputBottomText.addEventListener('input', function(){
+    bottomText.innerText = inputBottomText.value;
+});
+
+noBottomText.addEventListener('change', function(){
+    if (noBottomText.checked){
+        bottomText.style.display = 'none';
+    } else {
+        bottomText.style.display = 'flex';
+        bottomText.style.textAlign = 'center';
+    }
+});
+
+// FUENTE 
+fontSelect = document.getElementById('text-select-font');
+
+fontSelect.addEventListener('change', function(){
+    const selected = fontSelect.value;
+
+    if (selected === 'Arial'){
+        topText.style.fontFamily = 'arial';
+        bottomText.style.fontFamily = 'arial';
+    } else if (selected === 'Arial Black'){
+        topText.style.fontFamily = 'arial black';
+        bottomText.style.fontFamily = 'arial black';
+    } else if (selected === 'American           typewriter'){
+        topText.style.fontFamily = 'American typewriter';
+        bottomText.style.fontFamily = 'American Typewriter';
+    } else if (selected === 'Andale Mono'){
+        topText.style.fontFamily = 'Andale Mono';
+        bottomText.style.fontFamily = 'Andale Mono';
+    } else if (selected === 'Comic Sans MS'){
+        topText.style.fontFamily = 'comic sans ms';
+        bottomText.style.fontFamily = 'comic sans ms';
+    } else if (selected === 'Helvetica'){
+        topText.style.fontFamily = 'Helvetica';
+        bottomText.style.fontFamily = 'Helvetica';
+    } else if (selected === 'Impact'){
+        topText.style.fontFamily = 'impact';
+        bottomText.style.fontFamily = 'impact';
+    } else if (selected === 'Verdana'){
+        topText.style.fontFamily = 'verdana';
+        bottomText.style.fontFamily = 'verdana';
+    } else if (selected === 'Times New Roman'){
+        topText.style.fontFamily = 'times new roman';
+        bottomText.style.fontFamily = 'times new roman';
+    }
+});
+
+// TAMAÑO FUENTE
+textSize = document.getElementById('text-size');
+
+textSize.addEventListener('input', function(){
+    sizeSelected = textSize.value;
+    topText.style.fontSize = `${sizeSelected}px`;
+    bottomText.style.fontSize = `${sizeSelected}px`;
+});
+
+// TEXTO JUSTIFICADO
+leftAlign = document.getElementById('text-left-align');
+centerAlign = document.getElementById('text-center-align');
+rightAlign = document.getElementById('text-right-align');
+
+leftAlign.addEventListener('click', function(){
+    topText.style.justifyContent = 'left';
+    bottomText.style.justifyContent = 'left';
+});
+
+centerAlign.addEventListener('click', function(){
+    topText.style.justifyContent = 'center';
+    bottomText.style.justifyContent = 'center';
+});
+
+rightAlign.addEventListener('click', function(){
+    topText.style.justifyContent = 'right';
+    bottomText.style.justifyContent = 'right';
+})
 
 
 

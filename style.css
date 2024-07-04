@@ -79,12 +79,14 @@ main {
     width: 100%;
     background-color: white;
     color: black;
-    font-size: 50px;
+    font-size: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bold;
+    padding-left: 10px;
+    padding-right: 10px;
 }
 
 .meme-container-img {
