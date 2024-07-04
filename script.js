@@ -155,6 +155,20 @@ buttonReset.addEventListener('click', function(){
     aplicarFiltros();
 });
 
+// DESCARGAR MEME
+const buttonDownload = document.getElementById('button-download');
+const memeContainer = document.getElementById('meme-container');
+
+function descargarMeme () {
+    domtoimage.toBlob(memeContainer).then(function (blob) {
+        saveAs(blob, 'mi-meme.png')
+    }
+    )
+}
+
+buttonDownload.addEventListener('click', descargarMeme);
+
+
 
 
 
