@@ -128,15 +128,15 @@ function aplicarFiltros() {
     `;
 }
 
-inputBrillo.addEventListener('input', actualizarFiltros);
-inputOpacidad.addEventListener('input', actualizarFiltros);
-inputContraste.addEventListener('input', actualizarFiltros);
-inputDesenfoque.addEventListener('input', actualizarFiltros);
-inputEscalaGrises.addEventListener('input', actualizarFiltros);
-inputSepia.addEventListener('input', actualizarFiltros);
-inputHueRotation.addEventListener('input', actualizarFiltros);
-inputSaturacion.addEventListener('input', actualizarFiltros);
-inputNegativo.addEventListener('input', actualizarFiltros);
+inputBrillo.addEventListener('input', aplicarFiltros);
+inputOpacidad.addEventListener('input', aplicarFiltros);
+inputContraste.addEventListener('input', aplicarFiltros);
+inputDesenfoque.addEventListener('input', aplicarFiltros);
+inputEscalaGrises.addEventListener('input', aplicarFiltros);
+inputSepia.addEventListener('input', aplicarFiltros);
+inputHueRotation.addEventListener('input', aplicarFiltros);
+inputSaturacion.addEventListener('input', aplicarFiltros);
+inputNegativo.addEventListener('input', aplicarFiltros);
 
 // REESTABLECER FILTROS 
 const buttonReset = document.getElementById('button-filter-default');
