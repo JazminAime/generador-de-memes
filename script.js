@@ -8,7 +8,7 @@ const asideContainer = document.getElementById('panel');
 
 buttonPanelImage.addEventListener('click', function() {
     panelImage.style.display = 'block';
-    panelImage.style.height = '970px';
+    panelImage.style.height = '1070px';
     buttonClose.style.display = 'block';
     panelText.style.display = 'none';
     asideContainer.style.display = 'block';
@@ -16,7 +16,7 @@ buttonPanelImage.addEventListener('click', function() {
 
 buttonPanelText.addEventListener ('click', function() {
     panelText.style.display = 'block';
-    panelText.style.height = '970px';
+    panelText.style.height = '1070px';
     buttonClose.style.display = 'block';
     panelImage.style.display = 'none';
     asideContainer.style.display = 'block';
@@ -304,8 +304,45 @@ bcgTransparent.addEventListener('change', function(){
     }
 });
 
+// CONTORNO
+const noOutline = document.getElementById('no-outline');
+const lightOutline = document.getElementById('light-outline');
+const darkOutline = document.getElementById('dark-outline');
 
+noOutline.addEventListener('click', function(){
+    topText.style.textShadow = 'none';
+    bottomText.style.textShadow = 'none';
+})
 
+lightOutline.addEventListener('click', function(){
+    topText.style.textShadow = '2px 2px #FFF, -2px 2px #FFF, 2px -2px #FFF, -2px -2px #FFF';
+    bottomText.style.textShadow = '2px 2px #FFF, -2px 2px #FFF, 2px -2px #FFF, -2px -2px #FFF';
+})
+
+darkOutline.addEventListener('click', function(){
+    topText.style.textShadow = '2px 2px #000, -2px 2px #000, 2px -2px #000, -2px -2px #000';
+    bottomText.style.textShadow = '2px 2px #000, -2px 2px #000, 2px -2px #000, -2px -2px #000';
+})
+
+//  PADDING DE TEXTO
+ const inputPadding = document.getElementById('input-padding');
+
+ inputPadding.addEventListener('input', function(){
+     const selectedPadding = inputPadding.value;
+     topText.style.padding = `${selectedPadding}px 10px`;
+     bottomText.style.padding = `${selectedPadding}px 10px`;
+ })
+
+// INTERLINEADO
+const lineHeight = document.getElementById('line-height-text');
+
+lineHeight.addEventListener('change', function(){
+const selected = lineHeight.value;
+topText.style.lineHeight = selected;
+bottomText.style.lineHeight = selected;
+});
+
+// RESPONSIVE
 
 
 
