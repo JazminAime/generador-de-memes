@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
     <!-- dom to image -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"
         integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA=="
@@ -15,14 +16,14 @@
         crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.1/css/all.css" crossorigin="anonymous">
-    <title>Generador de memes - Proyecto 2</title>
+    <title>Generador de memes</title>
 </head>
 <body id="body" class="dark-theme">
 
     <!-- HEADER -->
     <header class="header-wrapper">
         <h1 class="header-title">Generador de Memes</h1>
-        <div class="header-container">
+        <div class="header-buttons">
             <button class="button-header" id="img-button"><i class="fa fa-regular fa-file-image"></i>Imagen</button>
             <button class="button-header" id="text-button"><i class="fa fa-solid fa-font"></i>Texto</button>
             <button class="button-header" id="button-dark-color"><i class="fa fa-solid fa-lightbulb"></i>Modo Oscuro</button>
@@ -39,7 +40,7 @@
             </figure>
             <p class="text-meme" id="bottom-text">BOTTOM TEXT</p>
         </div>
-        <div class="center-button-download">
+        <div>
             <button class="button-download" id="button-download"><i class="fa fa-solid fa-download"></i>Descagar Meme</button>
         </div>
     </main>
@@ -63,10 +64,10 @@
                 <!-- ASIDE FONDO -->
                 <div class="panel-container">
                     <p class="panel-caption">FONDO</p>
-                    <div class="panel-color-container">
-                        <div class="panel-color panel-aside">
-                            <input type="color" name="panel-color-input" id="panel-color-input" value="#FFFFFF" class="panel-input">
-                            <!-- <span>#FFFFFF</span> -->
+                    <div class="panel-text-flex">
+                        <div class="panel-color-flex-fondo-img">
+                            <input type="color" name="panel-color-input" id="panel-color-input" value="#FFFFFF">
+                            <span id="color-hex-fondo-img">#FFFFFF</span>
                         </div>
                         <div class="panel-aside">
                             <select id="panel-select" class="panel-select" id="select-background">
@@ -187,17 +188,17 @@
                             <!-- ASIDE COLOR TEXTO -->
                         <div class="panel-color-background">
                             <p class="panel-caption">COLOR</p>
-                            <div class="panel-color-flex">
-                                <input type="color" name="" id="text-color" class="panel-input" value="#000000">
-                                <!-- <span>#000000</span> -->
+                            <div class="panel-color-flex-fondo-text">
+                                <input type="color" name="" id="text-color" value="#000000">
+                                <span id="color-hex-text">#000000</span>
                             </div>
                         </div>
                         <!-- ASIDE COLOR FONDO -->
                         <div class="panel-color-background">
                             <p class="panel-caption">FONDO</p>
-                            <div class="panel-color-container">
-                                <input type="color" name="" id="background-text" class="panel-input" value="#FFFFFF">
-                                <!-- <span>#FFFFFF</span> -->
+                            <div class="panel-color-flex-fondo-text">
+                                <input type="color" name="" id="background-text" value="#FFFFFF">
+                                <span id="color-hex-fondo">#FFFFFF</span>
                             </div>
                         </div>
                         </div>
@@ -210,7 +211,7 @@
                 <!-- ASIDE CONTORNO -->
                 <div class="panel-container">
                     <p class="panel-caption">CONTORNO</p>
-                    <div class="panel-color-flex">
+                    <div>
                         <button class="button-cont" id="no-outline">Ninguno</button>
                         <button class="button-cont" id="light-outline">Claro</button>
                         <button class="button-cont" id="dark-outline">Oscuro</button>

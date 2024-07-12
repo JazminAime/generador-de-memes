@@ -35,7 +35,6 @@ body.light-theme {
 }
 
 .header-title {
-    /* color: white; */
     color: var(--color-text)
 }
 
@@ -63,49 +62,50 @@ i {
 main {
     background-color: var(--color-background);
     display: flex;
-    height: 1000px;
     flex-direction: column;
     align-items: center;
+    height: 1000px;
 } 
 
 .meme-container {
-    width: 600px;
-    height: 600px;
+    width: 650px;
+    max-width: 650px;
+    height: 750px; 
     display: flex;
     flex-direction: column;
-    background-color: black;
     position: relative;
+    background-color: black;
+    overflow: hidden;
 }
 
 .text-meme {
     width: 100%;
-    background-color: white;
+    background: white;
     color: black;
     font-size: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bold;
     padding: 35px;
-    box-sizing: border-box;
     margin: 0;
-    position: relative;
+    box-sizing: border-box;
 }
 
 .meme-container-img {
-    height: 500px;
-    width: 100%; 
+    flex: 1; 
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: black;
-    flex-grow: 1;
+    overflow: hidden; 
 }
 
 #img-meme {
-    width: 100%;
-    height: 100%;
+    flex-grow: 1;
+    background-size: cover;
+    object-fit: contain;
     display: none;
 }
 
@@ -116,8 +116,7 @@ main {
     font-size: 16px;
     border: 0;
     padding: 8px;
-    margin-top: 35px;
-    margin-bottom: 50px;
+    margin-top: 60px; 
     width: 150px;
     height: 40px;
 }
@@ -130,8 +129,8 @@ main {
 .close-panel {
     display: none;
     justify-content: flex-end;
-    margin-right: 7px;
-    margin-top: 5px;
+    margin-top: 10px;
+    margin-left: 7px;
 }
 
 .close-panel:hover {
@@ -192,28 +191,20 @@ main {
     background-color: var(--color-boton-hover);
 }
 
-.panel-color-container {
-    display: flex;
-}
-
 .panel-color {
-    position: relative;
     display: flex;
+    width: 100%;
 }
 
-/* span {
-    position: absolute;
-    color: white;
-} */
-
-.panel-aside {
-    width: 45%;
+#panel-color-input {
+    width: 40px;
 }
 
 .panel-select {
     background-color: var(--color-boton);
     color: var(--color-text);
     font-size: 16px;
+    width: 95%;
     height: 35px;
     border: 0;
     border-radius: 3px;
@@ -295,6 +286,7 @@ input[type='checkbox'] {
 
 .panel-text-flex {
     display: flex;
+    width: 100%;
 }
 
 .text-size {
@@ -328,8 +320,75 @@ input[type='checkbox'] {
     width: 48%;
 }
 
-.panel-color-flex {
+.panel-color-flex-fondo-img {
     display: flex;
+    width: 42%;
+    height: 35px;
+    background-color: var(--color-boton);
+    margin-left: 7px;
+    border: 0;
+    border-radius: 3px;
+    margin-right: 7px;
+    color: var(--color-text);
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+.panel-color-flex-fondo-img:hover {
+    background-color: var(--color-boton-hover);
+}
+
+.panel-color-flex-fondo-text {
+    display: flex;
+    width: 88%;
+    height: 35px;
+    background-color: var(--color-boton);
+    margin-left: 7px;
+    border: 0;
+    border-radius: 3px;
+    margin-right: 7px;
+    color: var(--color-text);
+    padding: 5px;
+    font-size: 16px;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+}
+
+input[type="color"] {
+    border: 0;
+    outline: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 20px;
+    margin-top: 2px;
+}
+
+input[type="color"]:hover {
+    cursor: pointer;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+    padding: 0;
+    border: none;
+}
+
+input[type="color"]::-webkit-color-swatch {
+    border: none;
+}
+
+input[type="color"]::-moz-color-swatch {
+    border: none;
+}
+
+span {
+    margin-left: 4px;
+}
+
+.panel-color-flex-fondo-text:hover {
+    background-color: var(--color-boton-hover);
 }
 
 .button-cont {
@@ -338,7 +397,7 @@ input[type='checkbox'] {
     margin-left: 7px;
     font-size: 16px;
     color: var(--color-text);
-    width: 68px;
+    width: 66px;
     height: 35px;
     border-radius: 3px;
     transition: background-color 0.3s;
@@ -351,4 +410,42 @@ input[type='checkbox'] {
 
 .light {
     display: none;
+}
+
+/* RESPONSIVE */
+
+/* TABLET */
+@media (max-width: 777px) and (min-width: 620px){
+    .aside-container {
+        width: 100%;
+    }
+
+    main {
+        padding: 30px;
+    }
+}
+
+/* MOBILE */
+@media (min-width: 319px) and (max-width: 621px) {
+    .header-buttons {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .button-header {
+        width: 80px;
+    }
+
+    #button-dark-color {
+        width: 120px;
+    }
+
+    #button-light-color {
+        width: 120px;
+    }
+
+    .aside-container {
+        width: 100%;
+    }
 }

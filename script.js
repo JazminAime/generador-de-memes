@@ -52,6 +52,7 @@ buttonLight.addEventListener('click', function(){
 // CARGAR IMAGEN
 const urlImg = document.getElementById('url-img');
 const imgMeme = document.getElementById('img-meme');
+const figure = document.getElementById('meme-img');
 
 urlImg.addEventListener('input', function(){
     const imgUrl = urlImg.value;
@@ -59,6 +60,7 @@ urlImg.addEventListener('input', function(){
     if (imgUrl) {
         imgMeme.src = imgUrl;
         imgMeme.style.display = 'block'; 
+        figure.style.backgroundColor = 'white';
     } else {
         imgMeme.src = '';
         imgMeme.style.display = 'none';
@@ -68,11 +70,14 @@ urlImg.addEventListener('input', function(){
 // FONDO - COLOR
 const panelColorBcg = document.getElementById('panel-color-input');
 const figureImg = document.getElementById('meme-img');
+const colorHex = document.getElementById('color-hex-fondo-img');
 
 panelColorBcg.addEventListener('input', function(){
     const colorSelect = panelColorBcg.value;
     figureImg.style.backgroundColor = colorSelect;
+    colorHex.innerText = colorSelect;
 });
+
 
 // FONDO - SELECT
 const selectBcg = document.getElementById('panel-select');
@@ -273,21 +278,25 @@ rightAlign.addEventListener('click', function(){
 
 // COLOR TEXTO
 textColor = document.getElementById('text-color');
+colorHexText = document.getElementById('color-hex-text');
 
 textColor.addEventListener('input', function(){
     const colorText = textColor.value;
     topText.style.color = colorText;
-    bottomText.style.color = colorText
+    bottomText.style.color = colorText;
+    colorHexText.innerText = colorText;
 });
 
 // FONDO TEXTO
 const bcgText = document.getElementById('background-text');
+const colorHexFondo = document.getElementById('color-hex-fondo');
 
 bcgText.addEventListener('input', function(){
     const bcgTexto = bcgText.value;
     topText.style.backgroundColor = bcgTexto
     ;
     bottomText.style.backgroundColor = bcgTexto;
+    colorHexFondo.innerText = bcgTexto;
 });
 
 // FONDO TRANSPARENTE
@@ -296,11 +305,18 @@ const bcgTransparent = document.getElementById('transparent-checkbox');
 bcgTransparent.addEventListener('change', function(){
     if (bcgTransparent.checked){
         topText.style.backgroundColor = 'transparent';
+        topText.style.position = 'absolute';
+        topText.style.top = '0';
         bottomText.style.backgroundColor = 'transparent';
+        bottomText.style.position = 'absolute';
+        bottomText.style.bottom = '0';
     } else {
         const bcgTexto = bcgText.value;
-        topText.style.backgroundColor = bcgTexto;
+        topText.style.backgroundColor = bcgTexto
+        ;
+        topText.style.position = 'relative';
         bottomText.style.backgroundColor = bcgTexto;
+        bottomText.style.position = 'relative';
     }
 });
 
@@ -341,9 +357,6 @@ const selected = lineHeight.value;
 topText.style.lineHeight = selected;
 bottomText.style.lineHeight = selected;
 });
-
-// RESPONSIVE
-
 
 
 
