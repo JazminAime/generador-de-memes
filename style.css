@@ -40,7 +40,7 @@ body.light-theme {
 
 .button-header {
     height: 35px;
-    width: 115px;
+    width: 125px;
     background-color: transparent;
     border: 0;
     color: var(--color-text);
@@ -427,6 +427,15 @@ span {
 
 /* MOBILE */
 @media (min-width: 319px) and (max-width: 621px) {
+    .meme-container {
+        width: 95vw;
+        height: 80vh;
+    }
+
+    .text-meme {
+    padding: 15px;
+    }
+
     .header-buttons {
         display: flex;
         justify-content: center;
